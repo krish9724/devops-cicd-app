@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "jest --testEnvironment=node"
+    "test": "jest --testEnvironment=node --forceExit"
   },
   "dependencies": {
     "cors": "^2.8.5",
