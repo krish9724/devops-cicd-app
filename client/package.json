@@ -11,7 +11,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/jest-dom": "^5.17.0"
+
   },
   "browserslist": {
     "production": [
