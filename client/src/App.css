@@ -1,0 +1,87 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #334155;
+}
+
+.header h1 { font-size: 1.6rem; }
+
+.health-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.health-badge.online { background: #166534; color: #86efac; }
+.health-badge.offline { background: #7f1d1d; color: #fca5a5; }
+
+.add-task {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.add-task input {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: #e2e8f0;
+  font-size: 1rem;
+}
+
+.add-task button {
+  padding: 0.7rem 1.5rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.add-task button:hover { background: #2563eb; }
+
+.task-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1.2rem;
+  background: #1e293b;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.task-list li:hover { background: #263248; }
+.task-list li.done span:first-child { text-decoration: line-through; color: #64748b; }
+
+.footer {
+  margin-top: 3rem;
+  text-align: center;
+  color: #475569;
+  font-size: 0.85rem;
+}

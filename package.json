@@ -1,0 +1,12 @@
+{
+  "name": "devops-cicd-app",
+  "version": "1.0.0",
+  "description": "Full-stack React + Node.js app with CI/CD pipeline",
+  "scripts": {
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "start:server": "cd server && node index.js",
+    "start:client": "cd client && npm start",
+    "test:server": "cd server && npm test",
+    "test:client": "cd client && npm test -- --watchAll=false"
+  }
+}
