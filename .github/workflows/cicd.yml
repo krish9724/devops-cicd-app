@@ -41,12 +41,13 @@ jobs:
           cache-dependency-path: server/package-lock.json
 
       # Step 3: Install server dependencies
-      - name: 📦 Install Server Dependencies
+      - name: Install Server Dependencies
         working-directory: ./server
         run: npm install
 
+
       # Step 4: Run backend unit tests
-      - name: ✅ Run Backend Tests (Jest + Supertest)
+      - name: Run Backend Tests
         working-directory: ./server
         run: npm test
 
