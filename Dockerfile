@@ -11,6 +11,7 @@ RUN npm install
 
 # Copy client source and build
 COPY client/ ./
+ENV CI=false
 RUN npm run build
 
 # ─────────────────────────────────────────
@@ -37,8 +38,8 @@ WORKDIR /app
 # Copy server from stage 2
 COPY --from=server-build /app/server ./server
 
-# Copy built React app into server's public folder
-COPY --from=client-build /app/client/build ./server/public
+# Copy built React app into the client folder so the backend path resolves correctly
+COPY --from=client-build /app/client/build /app/client/build
 
 # Install serve to host static files
 RUN npm install -g serve
