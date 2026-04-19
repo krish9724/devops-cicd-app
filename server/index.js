@@ -14,9 +14,7 @@ const tasks = [
   { id: 4, title: 'Push to Docker Hub', done: false, priority: 'Low', reason: 'Can be done after CI/CD', deadline_days: 5, summary: 'Publish image' },
 ];
 
-app.get('/', (req, res) => {
-  res.json({ message: 'DevOps CI/CD App - Backend Running!', version: '1.0.0' });
-});
+// Root route now handled by express.static
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'healthy', timestamp: new Date().toISOString() });
