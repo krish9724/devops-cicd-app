@@ -6,7 +6,7 @@
 ![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)
 ![AI](https://img.shields.io/badge/AI-Gemini%20API-orange?logo=google)
 
-A full-stack **AI-powered Task Manager** app designed for modern cloud architectures. Built with React + Node.js, integrated with Large Language Models, containerized with Docker, and designed for deployment on AWS/Azure via GitHub Actions CI/CD pipelines.
+A full-stack **AI-powered Task Manager** app designed for modern cloud architectures. Built with React + Node.js, integrated with Large Language Models, containerized with Docker, and deployed on Render.com with CI/CD techniques.
 
 ---
 
@@ -28,29 +28,27 @@ This project utilizes the **GenAI / Gemini API** to automatically augment your t
 | **LLM Integration** | Google Gemini API (or OpenAI) |
 | **Containerization** | Docker & Docker Compose |
 | **CI/CD** | GitHub Actions |
-| **Cloud Hosting** | AWS EC2 / Azure Virtual Machine (Free Tier) |
+| **Cloud Hosting** | Render.com (PaaS Free Tier) |
 
 ---
 
-## ☁️ Cloud Deployment (AWS EC2 / Azure VM)
+## ☁️ Cloud Deployment (Render.com)
 
-1. Provision an **Ubuntu Server 22.04 LTS** instance on AWS EC2 or Azure VM.
-2. Open ports `80` (HTTP), `443` (HTTPS), and `5000` (Backend API) in the Security Group / Firewalls.
-3. SSH into your instance:
+1. Ensure the code is pushed to your GitHub Repository.
+2. Sign up on [Render.com](https://render.com) using GitHub.
+3. Click **New +** -> **Web Service** and correctly link your GitHub repository.
+4. Set the **Build Command**:
    ```bash
-   ssh -i your-key.pem ubuntu@your-vm-ip
+   npm install --prefix server && npm install --prefix client && npm run build --prefix client
    ```
-4. Install Docker and Docker Compose on the VM.
-5. Clone the repository and configure `.env` secrets:
+5. Set the **Start Command**:
    ```bash
-   git clone https://github.com/krish9724/devops-cicd-app
-   cd devops-cicd-app/server
-   nano .env # Add GEMINI_API_KEY
+   node server/index.js
    ```
-6. Run the containers:
-   ```bash
-   docker-compose up -d --build
-   ```
+6. Add the secret environment variable:
+   - Key: `GEMINI_API_KEY`
+   - Value: `your_gemini_key_here`
+7. Click **Deploy**. Render will automatically build the React Interface and start the Node Express server.
 
 ---
 
@@ -109,5 +107,5 @@ App runs at `http://localhost:3000`.
 
 ## 👨‍💻 Author
 **Krish Gupta & Team** — JG University
-Submitted to: **MR. SUMIT BHAT SIR**
+Submitted to: **MR. MAYANK SIR**
 Project: DevOps Assignment — AI, Cloud & CI/CD Pipeline

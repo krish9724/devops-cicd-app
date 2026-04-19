@@ -1,5 +1,5 @@
 # AI Task Manager - DevOps Project Presentation
-**Submitted to:** MR. SUMIT BHAT SIR
+**Submitted to:** MR. MAYANK SIR
 **Course:** DevOps & Cloud Computing
 **Team:** Krish Gupta & Team (JG University)
 
@@ -29,7 +29,7 @@
 * **GitHub Actions (CI/CD):** 
   * On every `git push`, tests are automated using Jest.
   * If tests pass, Docker images are built and pushed securely to Docker Hub.
-* **Hosting (AWS/Azure):** Designed to pull the Docker image and host on an EC2 instance or Azure VM.
+* **Hosting (Render.com):** Configured as a unified container deployed seamlessly as a modern PaaS Web Service.
 * **Security:** API keys (`.env`) and CI/CD secrets (`DOCKERHUB_TOKEN`) securely managed.
 
 ---
@@ -52,7 +52,7 @@
 3. **Backend API (Student 3):** Developed the Express logic and Data structures.
 4. **AI Specialist (Student 4):** Handled prompt engineering and Gemini API connectivity.
 5. **DevOps Engineer (Student 5):** Configured Docker Compose, Dockerfiles, and GitHub Secrets.
-6. **Cloud Architect (Student 6):** Set up Azure VM/AWS EC2 and managed the CI/CD pipeline triggers.
+6. **Cloud Architect (Student 6):** Connected GitHub directly to Render PaaS and managed the cloud environment deployment.
 
 ---
 
